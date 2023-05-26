@@ -1,0 +1,18 @@
+﻿<Window x:Class="PenDB.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PenDB"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Content="Открыть" HorizontalAlignment="Left" Margin="45,80,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Content="Добавить" HorizontalAlignment="Left" Margin="195,80,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Content="Сортировать" HorizontalAlignment="Center" Margin="0,80,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Content="Удалить" HorizontalAlignment="Left" Margin="505,80,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Content="Удалить всё" HorizontalAlignment="Left" Margin="655,79,0,0" VerticalAlignment="Top" Width="100"/>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=1}" Height="NaN" Margin="45,125,45,35" Width="NaN"/>
+
+    </Grid>
+</Window>
