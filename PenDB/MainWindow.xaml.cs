@@ -24,5 +24,25 @@ namespace PenDB
         {
             InitializeComponent();
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Open_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Author_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

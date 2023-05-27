@@ -7,12 +7,25 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Открыть" HorizontalAlignment="Left" Margin="45,80,0,0" VerticalAlignment="Top" Width="100"/>
-        <Button Content="Добавить" HorizontalAlignment="Left" Margin="195,80,0,0" VerticalAlignment="Top" Width="100"/>
-        <Button Content="Сортировать" HorizontalAlignment="Center" Margin="0,80,0,0" VerticalAlignment="Top" Width="100"/>
-        <Button Content="Удалить" HorizontalAlignment="Left" Margin="505,80,0,0" VerticalAlignment="Top" Width="100"/>
-        <Button Content="Удалить всё" HorizontalAlignment="Left" Margin="655,79,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Name="Button_Save" Content="Открыть" HorizontalAlignment="Left" Margin="45,80,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Name="Button_Add" Content="Добавить" HorizontalAlignment="Left" Margin="195,80,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Name="Button_Sort" Content="Сортировать" HorizontalAlignment="Center" Margin="0,80,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Name="Button_Del" Content="Удалить" HorizontalAlignment="Left" Margin="505,80,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Name="Button_Del_All" Content="Удалить всё" HorizontalAlignment="Left" Margin="655,79,0,0" VerticalAlignment="Top" Width="100"/>
         <DataGrid d:ItemsSource="{d:SampleData ItemCount=1}" Height="NaN" Margin="45,125,45,35" Width="NaN"/>
+        <Menu Margin="0,0,157,0" Height="30" VerticalAlignment="Top">
+            <Menu.Background>
+                <ImageBrush/>
+            </Menu.Background>
 
+            <MenuItem Header="Фаил" Click="MenuItem_Click">
+                <MenuItem Header="Открыть" Click="Open_Click"/>
+                <MenuItem Header="Сохранить" Click="Save_Click"/>
+            </MenuItem>
+
+            <MenuItem Header="Справка" Click="MenuItem_Click">
+                <MenuItem Header="Об авторе" Click="Author_Click" />
+            </MenuItem>
+        </Menu>
     </Grid>
 </Window>
