@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PenDB"
         mc:Ignorable="d"
-        Title="Добавить Pen" Height="271" Width="315">
+        Title="Добавить Pen" Height="271" Width="315" Icon="/paper_pen.png">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Комп_Обои_2 форма.jpeg" Stretch="UniformToFill" TileMode="None"/>

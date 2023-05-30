@@ -109,5 +109,11 @@
   <ItemGroup>
     <Resource Include="Комп_Обои_2 форма.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="paper_pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="paper_pen2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
