@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 
 namespace PenDB
 {
+    //todo как искать имя файла окна
     /// <summary>
     /// Логика взаимодействия для WindowAddPen.xaml
     /// </summary>

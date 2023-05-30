@@ -1,4 +1,4 @@
-using PenDB;
+//using PenDB;
 using System.Xml.Linq;
 
 namespace DBTest
@@ -9,7 +9,7 @@ namespace DBTest
         [TestMethod]
         public void TestMethod1()
         {
-            Pen f1 = new Pen();
+            //Pen f1 = new Pen();
         }
     }
 }

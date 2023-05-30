@@ -17,7 +17,7 @@ namespace PenDB
         {
             pens = new ObservableCollection<Pen>();
         }
-
+        //добавление сразу к экземпляру класса
         /// Добавление ручки в список
         public void AddPen(string brend, string color, double thickness, string automatic, int price)
         {
@@ -56,7 +56,7 @@ namespace PenDB
                 {
                     string str = sw.ReadLine();
                     String[] dataFromFile = str.Split(new String[] { "|" },
-                        StringSplitOptions.RemoveEmptyEntries);
+                        StringSplitOptions.RemoveEmptyEntries);   // StringSplitOptions.RemoveEmptyEntries - удаляет пустые подстроки  
 
                     string brend = dataFromFile[0];
                     string color = dataFromFile[1];

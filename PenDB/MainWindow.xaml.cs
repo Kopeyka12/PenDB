@@ -24,9 +24,7 @@ namespace PenDB
     /// </summary>
     public partial class MainWindow : Window
     {
-        /// Счетчик нажатий кнопки Сортировка
-        int countCLICK = 0;
-
+       
         public MainWindow()
         {
             InitializeComponent();
@@ -54,7 +52,7 @@ namespace PenDB
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             if (filename == "")
-            {
+            {   //конет к DialogResult 
                 if (saveFileDialog.ShowDialog() == DialogResult) return;
                 filename = saveFileDialog.FileName;
 
@@ -74,6 +72,7 @@ namespace PenDB
         //Открывается окно новой формы 
         private void Button_Add_Click(object sender, RoutedEventArgs e)
         {
+            //todo
             WindowAddPen addform = new WindowAddPen();
             addform.Owner = this;
             addform.Show();
