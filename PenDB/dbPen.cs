@@ -19,7 +19,7 @@ namespace PenDB
         }
 
         /// Добавление ручки в список
-        public void AddBook(string brend, string color, double thickness, string automatic, int price)
+        public void AddPen(string brend, string color, double thickness, string automatic, int price)
         {
             Pen newPen = new Pen(brend, color, thickness, automatic, price);
             pens.Add(newPen);
@@ -63,7 +63,7 @@ namespace PenDB
                     double thickness = double.Parse(dataFromFile[2]);
                     string automatic = dataFromFile[3];
                     int price = int.Parse(dataFromFile[4]);
-                    AddBook(brend, color, thickness, automatic, price);
+                    AddPen(brend, color, thickness, automatic, price);
                 }
             }
         }

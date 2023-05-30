@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PenDB"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="650">
     <Grid>
-        <Button Name="Button_Save" Content="Открыть" HorizontalAlignment="Left" Margin="45,80,0,0" VerticalAlignment="Top" Width="100"/>
-        <Button Name="Button_Add" Content="Добавить" HorizontalAlignment="Left" Margin="195,80,0,0" VerticalAlignment="Top" Width="100"/>
-        <Button Name="Button_Sort" Content="Сортировать" HorizontalAlignment="Center" Margin="0,80,0,0" VerticalAlignment="Top" Width="100"/>
-        <Button Name="Button_Del" Content="Удалить" HorizontalAlignment="Left" Margin="505,80,0,0" VerticalAlignment="Top" Width="100"/>
-        <Button Name="Button_Del_All" Content="Удалить всё" HorizontalAlignment="Left" Margin="655,79,0,0" VerticalAlignment="Top" Width="100"/>
-        <DataGrid d:ItemsSource="{d:SampleData ItemCount=1}" Height="NaN" Margin="45,125,45,35" Width="NaN"/>
+        <Button Name="Button_Open" Content="Открыть" HorizontalAlignment="Left" Margin="523,45,0,0" VerticalAlignment="Top" Width="100" Click="Button_Open_Click"/>
+        <Button Name="Button_Add" Content="Добавить" HorizontalAlignment="Left" Margin="523,125,0,0" VerticalAlignment="Top" Width="100" Click="Button_Add_Click"/>
+        <Button Name="Button_Sort" Content="Сортировать" HorizontalAlignment="Left" Margin="523,214,0,0" VerticalAlignment="Top" Width="100" Click="Button_Sort_Click"/>
+        <Button Name="Button_Del" Content="Удалить" HorizontalAlignment="Left" Margin="521,379,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Name="Button_Del_All" Content="Удалить всё" HorizontalAlignment="Left" Margin="523,301,0,0" VerticalAlignment="Top" Width="100"/>
+        <DataGrid x:Name="datagrid" d:ItemsSource="{d:SampleData ItemCount=1}" Height="NaN" Margin="45,44,157,35" Width="NaN"/>
         <Menu Margin="0,0,157,0" Height="30" VerticalAlignment="Top">
             <Menu.Background>
                 <ImageBrush/>
