@@ -103,5 +103,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Комп_Обои.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Комп_Обои_2 форма.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

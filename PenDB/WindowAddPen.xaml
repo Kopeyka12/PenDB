@@ -7,18 +7,21 @@
         mc:Ignorable="d"
         Title="Добавить Pen" Height="271" Width="315">
     <Grid>
-        <Button Name="Button_Add_Book" Content="Добавить" HorizontalAlignment="Left" Margin="30,195,0,0" Width="98" Height="20" VerticalAlignment="Top" Click="Button_Add_Book_Click"/>
-        <Button Name="Button_Close_Form" Content="Закрыть" HorizontalAlignment="Left" Margin="185,195,0,0" Width="98" Height="20" VerticalAlignment="Top" Click="Button_Close_Form_Click"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Комп_Обои_2 форма.jpeg" Stretch="UniformToFill" TileMode="None"/>
+        </Grid.Background>
+        <Button Name="Button_Add_Book" Content="Добавить" HorizontalAlignment="Left" Margin="30,195,0,0" Width="98" Height="20" VerticalAlignment="Top" Click="Button_Add_Book_Click" Background="#FFC450EE"/>
+        <Button Name="Button_Close_Form" Content="Закрыть" HorizontalAlignment="Left" Margin="185,195,0,0" Width="98" Height="20" VerticalAlignment="Top" Click="Button_Close_Form_Click" Background="#FFC450EE"/>
         <Label Content="Бренд" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <Label Content="Цвет" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="10,44,0,0" Height="22" Width="41"/>
+        <Label Content="Цвет" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="10,44,0,0" Height="23" Width="41"/>
         <Label Content="Толщина пасты" HorizontalAlignment="Left" Margin="8,78,0,0" VerticalAlignment="Top"/>
         <Label Content="Автоматическая" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top"/>
         <Label Content="Цена" HorizontalAlignment="Left" Margin="13,147,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="textBox_Brend" HorizontalAlignment="Left" Margin="163,18,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="textBox_Color" HorizontalAlignment="Left" Margin="163,49,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="textBox_Thickness" HorizontalAlignment="Left" Margin="163,83,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="textBox_Automatic" HorizontalAlignment="Left" Margin="163,114,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="textBox_Price" HorizontalAlignment="Left" Margin="163,151,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="textBox_Brend" HorizontalAlignment="Left" Margin="163,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFCAC2F6"/>
+        <TextBox Name="textBox_Color" HorizontalAlignment="Left" Margin="163,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFCAC2F6"/>
+        <TextBox Name="textBox_Thickness" HorizontalAlignment="Left" Margin="163,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFCAC2F6"/>
+        <TextBox Name="textBox_Automatic" HorizontalAlignment="Left" Margin="163,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFCAC2F6"/>
+        <TextBox Name="textBox_Price" HorizontalAlignment="Left" Margin="163,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFCAC2F6"/>
 
     </Grid>
 </Window>

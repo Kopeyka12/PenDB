@@ -30,12 +30,7 @@ namespace PenDB
         public MainWindow()
         {
             InitializeComponent();
-            /// todo
-            /// как работает ItemSource
             datagrid.ItemsSource = Datapen.pens;
-            //System.Windows.Threading.DispatcherTimer 
-            //Label_Save.Visibility = Visibility.Hidden;
-            //InitializeTimer();
         }
        
         public DBPen Datapen = new DBPen();
@@ -46,23 +41,16 @@ namespace PenDB
 
         }
 
+        //Обработчик событии при нажатии на кнопку из меню Открыть
+        //обращаемся к обработчику событии из кнопки Открыть
         private void Open_Click(object sender, RoutedEventArgs e)
         {
             Button_Open_Click(sender, e);
         }
-
+        
+        //Обработчик событии при нажатии на кнопку из меню Сохранить
+        //открывается диалоговое окно, где выбираем в какой файл сохранить базу данных
         private void Save_Click(object sender, RoutedEventArgs e)
-        {
-            Button_Save_Click(sender, e);
-        }
-
-        private void Author_Click(object sender, RoutedEventArgs e)
-        {
-            string Info = "Разработчик: Мирошин В. И., студент группы ВМК-21\n\n";
-            MessageBox.Show(Info, "О разработчике", MessageBoxButton.OK, MessageBoxImage.Information);
-        }
-
-        private void Button_Save_Click(object sender, RoutedEventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             if (filename == "")
@@ -73,7 +61,17 @@ namespace PenDB
             }
             Datapen.SaveDB(filename);
         }
+       
+        //Обработчик событии при нажатии на кнопку из меню Автор
+        //открывается окно с сообщением
+        private void Author_Click(object sender, RoutedEventArgs e)
+        {
+            string Info = "Разработчик: Мирошин В. И., студент группы ВМК-21\n\n";
+            MessageBox.Show(Info, "О разработчике", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
 
+        //Обработчик событии при нажатии на кнопку Добавить
+        //Открывается окно новой формы 
         private void Button_Add_Click(object sender, RoutedEventArgs e)
         {
             WindowAddPen addform = new WindowAddPen();
@@ -81,51 +79,34 @@ namespace PenDB
             addform.Show();
         }
 
-        private void Button_Sort_Click(object sender, RoutedEventArgs e)
-        {
-            countCLICK++; // увеличиваем счетчик на 1 при каждом нажатии на кнопку
-
-            // проверяем значение счетчика и выполняем соответствующее действие
-            if (countCLICK == 1)
-            {
-                //создаем обьект класса SortDescription . сортируем по столбцу "Author" по возрастанию
-                var sortByName = new SortDescription("Бренд", ListSortDirection.Ascending);
-                //применяем сортировку
-                datagrid.Items.SortDescriptions.Add(sortByName);
-                //обновляем данные в таблице
-                datagrid.Items.Refresh();
-            }
-            else if (countCLICK == 2)
-            {
-                //создаем обьект класса SortDescription . сортируем по столбцу "Author" по возрастанию
-                var sortByName = new SortDescription("Бренд", ListSortDirection.Descending);
-                //удаление сущ.фильтрации
-                datagrid.Items.SortDescriptions.Clear();
-                //применяем сортировку
-                datagrid.Items.SortDescriptions.Add(sortByName);
-                //обновляем данные в таблице
-                datagrid.Items.Refresh();
-            }
-            else
-            {
-
-                countCLICK = 0;
-                datagrid.Items.SortDescriptions.Clear();
-            }
-        }
-
+       
+        //Обработчик событияя при нажатии кнопки Открыть
+        //Открывает диалоговое окно, где мы открываем файл с базой данных
         private void Button_Open_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == true)
             {
                 filename = openFileDialog.FileName;
-                //this.Text = filename + " - База данных книжного магазина";
-
-
                 Datapen.OpenFile(filename);
 
             }
+        }
+
+
+        // Обработчик события на нажатие кнопку Удалить все
+        // Удаляет всю базу данных
+        private void Button_Del_All_Click(object sender, RoutedEventArgs e)
+        {
+            Datapen.pens.Clear();
+        }
+
+        // Обработчик события на нажатие кнопку Удалить строку
+        // Удаляет выделенную строчку из базы данных
+        private void Button_Del_Click(object sender, RoutedEventArgs e)
+        {
+            int ind = datagrid.SelectedIndex;
+            Datapen.pens.RemoveAt(ind);
         }
     }
 }

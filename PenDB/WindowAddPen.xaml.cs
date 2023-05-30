@@ -26,9 +26,9 @@ namespace PenDB
 
         private void Button_Add_Book_Click(object sender, RoutedEventArgs e)
         {
-            // Связывает FormAddBook с главной формой
+            // Связывает WindowAddPen с главной формой
             MainWindow mForm = this.Owner as MainWindow;
-            //DBBook dB = new DBBook();
+            
             if (check_input())
             {
                 string brend = textBox_Brend.Text;
