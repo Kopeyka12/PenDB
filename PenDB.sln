@@ -5,8 +5,6 @@ VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PenDB", "PenDB\PenDB.csproj", "{B7429B1B-097B-4A6D-A3E1-4B79F6A80E82}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBTest", "DBTest\DBTest.csproj", "{6082F123-2FA7-4637-9138-D03B5E1E733D}"
-EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DataBaseSetup", "DataBaseSetup\DataBaseSetup.vdproj", "{86149A2B-E262-43B3-81B7-1ACD6252C2E8}"
 EndProject
 Global
@@ -19,10 +17,6 @@ Global
 		{B7429B1B-097B-4A6D-A3E1-4B79F6A80E82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7429B1B-097B-4A6D-A3E1-4B79F6A80E82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7429B1B-097B-4A6D-A3E1-4B79F6A80E82}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6082F123-2FA7-4637-9138-D03B5E1E733D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6082F123-2FA7-4637-9138-D03B5E1E733D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6082F123-2FA7-4637-9138-D03B5E1E733D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6082F123-2FA7-4637-9138-D03B5E1E733D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{86149A2B-E262-43B3-81B7-1ACD6252C2E8}.Debug|Any CPU.ActiveCfg = Debug
 		{86149A2B-E262-43B3-81B7-1ACD6252C2E8}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection

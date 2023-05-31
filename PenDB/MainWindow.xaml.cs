@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿// @author Мирошин В. И.
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,9 +20,13 @@ using System.Windows.Threading;
 
 namespace PenDB
 {
+    
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
+    
+    //В совйствах MainWindow в разделе Общее можно в Icon задать путь к иконки приложения
+
     public partial class MainWindow : Window
     {
        
@@ -72,7 +77,11 @@ namespace PenDB
         //Открывается окно новой формы 
         private void Button_Add_Click(object sender, RoutedEventArgs e)
         {
-            //todo
+            //Сначала создаем объект WindowAddPen класса (для создание второго окна),
+            //а потом для его отображения на экране вызываем метод Show.
+            //У всех окон есть свойство Owner, которое указывает на главное окно, владеющее текущим окном.
+            //То есть если  мы закроем MainWindow то и закроется WindowAddPen
+            //Используя ссылку на окно, мы можем взаимодействовать с ним, например, передавать ему данные из главной формы или вызывать его методы.
             WindowAddPen addform = new WindowAddPen();
             addform.Owner = this;
             addform.Show();
@@ -107,5 +116,7 @@ namespace PenDB
             int ind = datagrid.SelectedIndex;
             Datapen.pens.RemoveAt(ind);
         }
+
+        
     }
 }

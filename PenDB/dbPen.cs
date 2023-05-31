@@ -1,4 +1,5 @@
-﻿using System;
+﻿// @author Мирошин В. И.
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -31,7 +32,8 @@ namespace PenDB
         {
             if (!System.IO.File.Exists(name))
                 throw new Exception("Файл не существует");
-            ///Почитать
+            ///StreamWriter записывает в поток сиволы в определенной кодировки
+            ///В том случае если файл существет он просто в него добавлется данные в кодировке Unicode
             using (StreamWriter sw = new StreamWriter(name, false, System.Text.Encoding.Unicode))
             {
                 foreach (Pen s in pens)
