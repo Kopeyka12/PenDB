@@ -16,7 +16,7 @@
         <Label Content="Цвет" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="10,44,0,0" Height="23" Width="41"/>
         <Label Content="Толщина пасты" HorizontalAlignment="Left" Margin="8,78,0,0" VerticalAlignment="Top"/>
         <Label Content="Автоматическая" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top"/>
-        <Label Content="Цена" HorizontalAlignment="Left" Margin="13,147,0,0" VerticalAlignment="Top"/>
+        <Label Content="Цена" HorizontalAlignment="Left" Margin="13,147,0,0" VerticalAlignment="Top" FontFamily="Segoe UI"/>
         <TextBox Name="textBox_Brend" HorizontalAlignment="Left" Margin="163,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFCAC2F6"/>
         <TextBox Name="textBox_Color" HorizontalAlignment="Left" Margin="163,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFCAC2F6"/>
         <TextBox Name="textBox_Thickness" HorizontalAlignment="Left" Margin="163,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFCAC2F6"/>

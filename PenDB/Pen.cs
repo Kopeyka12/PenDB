@@ -53,7 +53,7 @@ namespace PenDB
         public int Price
         {
             get { return price; }
-            set { price = value; }
+            set {  price = value; }
         }
         //В переопределнном методе выводем значание с разделительным знаком
         public override string ToString()

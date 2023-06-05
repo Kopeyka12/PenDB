@@ -57,7 +57,8 @@ namespace PenDB
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             if (filename == "")
-            {   //конет к DialogResult 
+            {   //ShowDialog отображает форму как модальное диалоговое окно,
+                //а вот DialogResultс задает идентификаторы, которые определяют возвращаемое значение диалогового окна (можем узнать, какую кнопку в окне сообщения нажал пользователь) 
                 if (saveFileDialog.ShowDialog() == DialogResult) return;
                 filename = saveFileDialog.FileName;
 

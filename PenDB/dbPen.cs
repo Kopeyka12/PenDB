@@ -18,7 +18,7 @@ namespace PenDB
         {
             pens = new ObservableCollection<Pen>();
         }
-        //добавление сразу к экземпляру класса
+
         /// Добавление ручки в список
         public void AddPen(string brend, string color, double thickness, string automatic, int price)
         {

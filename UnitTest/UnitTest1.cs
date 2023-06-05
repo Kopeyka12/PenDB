@@ -1,6 +1,9 @@
-﻿using PenDB;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Xml.Linq;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+
+
+
+using PenDB;
 
 namespace UnitTest
 {
@@ -8,25 +11,31 @@ namespace UnitTest
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod_Constructor()
+        public void TestMethod_1()
         {
-            Pen f1 = new Pen("Anton", "Samaev", "89963112857", "anton@mail.ru");
-            Assert.AreEqual("Anton", f1.name_get());
-            Assert.AreEqual("Samaev", f1.surname_get());
-            Assert.AreEqual("89963112857", f1.phone_get());
-            Assert.AreEqual("anton@mail.ru", f1.email_get());
+            Pen p1 = new Pen("Berligo", "Черный", 0.8, "Да", 45);
+            Assert.AreEqual("Berligo", p1.Brend);
+            Assert.AreEqual("Черный", p1.Color); 
+            Assert.AreEqual(0.8, p1.Thickness);
+            Assert.AreEqual("Да", p1.Automatic);
+            Assert.AreEqual(45, p1.Price);
+            Assert.AreEqual("Berligo|Черный|0,8|Да|45", p1.ToString());
 
-            Contact f2 = new Contact("Ivan", "Ivanov", "123456789", "ivanov@mail.ru");
-            Assert.AreEqual("Ivan", f2.name_get());
-            Assert.AreEqual("Ivanov", f2.surname_get());
-            Assert.AreEqual("123456789", f2.phone_get());
-            Assert.AreEqual("ivanov@mail.ru", f2.email_get());
+            Pen p2 = new Pen("Pilot", "Красный", 1, "Нет", 38);
+            Assert.AreEqual("Pilot", p2.Brend);
+            Assert.AreEqual("Красный", p2.Color);
+            Assert.AreEqual(1, p2.Thickness);
+            Assert.AreEqual("Нет", p2.Automatic);
+            Assert.AreEqual(38, p2.Price);
+            Assert.AreEqual("Pilot|Красный|1|Нет|38", p2.ToString());
 
-            Contact f3 = new Contact("Sasha", "Petrov", "0987654321", "sasha@mail.ru");
-            Assert.AreEqual("Sasha", f3.name_get());
-            Assert.AreEqual("Petrov", f3.surname_get());
-            Assert.AreEqual("0987654321", f3.phone_get());
-            Assert.AreEqual("sasha@mail.ru", f3.email_get());
+            Pen p3 = new Pen("Bic", "Синий", 0.5, "Нет", 26);
+            Assert.AreEqual("Bic", p3.Brend);
+            Assert.AreEqual("Синий", p3.Color);
+            Assert.AreEqual(0.5, p3.Thickness);
+            Assert.AreEqual("Нет", p3.Automatic);
+            Assert.AreEqual(26, p3.Price);
+            Assert.AreEqual("Bic|Синий|0,5|Нет|26", p3.ToString());
         }
     }
 }
